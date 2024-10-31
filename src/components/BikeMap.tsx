@@ -3,8 +3,8 @@ import { Map } from "maplibre-gl";
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function BikeMap() {
-    const mapContainer = useRef(null);
-    const map = useRef(null);
+    const mapContainer = useRef<HTMLDivElement | null>(null);
+    const map = useRef<Map | null>(null);
 
     useEffect(() => {
         // Only initialize if map hasn't been created and container exists
