@@ -9,6 +9,11 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
+    esbuild: {
+        supported: {
+          'top-level-await': true
+        }
+    },
     base: '/bikes/',
 })
 
