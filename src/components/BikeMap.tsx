@@ -25,14 +25,12 @@ export default function BikeMap() {
                 map.current = null;
             }
         };
-    }, []); // Empty dependency array means this effect runs once on mount
+    }, []); 
 
     return (
-        <div className="relative h-screen w-full"> 
             <div 
                 ref={mapContainer} 
-                className="relative w-full h-full" 
+                className="absolute inset-0 w-full h-full" 
             />
-        </div>
     );
 }

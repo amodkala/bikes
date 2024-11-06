@@ -1,14 +1,17 @@
-import { useContext } from "react";
 import BikeMap from "./components/BikeMap";
-import { DBContext } from "./components/DBContext";
+import MapMenu from "./components/MapMenu";
 
 export default function App() {
-    const conn = useContext(DBContext)
     return (
-        <>
-            <DBContext.Provider value={conn}>
-                <BikeMap />
-            </DBContext.Provider>
-        </>
+        <div className="relative h-screen w-screen"> 
+            <BikeMap />
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="relative w-full h-full p-6">
+                    <div className="pointer-events-auto">
+                        <MapMenu />
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

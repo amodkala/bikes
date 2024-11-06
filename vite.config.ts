@@ -11,7 +11,7 @@ export default defineConfig({
     },
     esbuild: {
         supported: {
-          'top-level-await': true
+            'top-level-await': true
         }
     },
     base: '/bikes/',
